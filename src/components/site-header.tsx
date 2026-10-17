@@ -30,6 +30,12 @@ export function SiteHeader() {
           >
             Ofis Taşımacılığı
           </Link>
+          <Link
+            href="/sehirler-arasi-nakliyat"
+            className="inline-flex min-h-11 items-center rounded-md px-4 text-sm font-medium text-primary hover:bg-primary/5"
+          >
+            Şehirler Arası Nakliyat
+          </Link>
         </nav>
       </div>
     </header>

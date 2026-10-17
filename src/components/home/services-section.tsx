@@ -18,6 +18,7 @@ const services = [
   },
   {
     title: "Şehirler Arası Nakliyat",
+    href: "/sehirler-arasi-nakliyat",
     description:
       "Farklı şehirler arasındaki taşınmalarınız için mesafe ve zamanlamayı dikkate alan taşımacılık planlaması.",
     iconPath:
@@ -67,16 +68,12 @@ export function ServicesSection() {
               </svg>
             </div>
             <h3 className="mt-6 text-xl font-semibold tracking-tight text-primary">
-              {service.href ? (
-                <Link
-                  href={service.href}
-                  className="rounded-sm underline decoration-accent underline-offset-4 after:absolute after:inset-0 after:rounded-2xl hover:decoration-primary"
-                >
-                  {service.title}
-                </Link>
-              ) : (
-                service.title
-              )}
+              <Link
+                href={service.href}
+                className="rounded-sm underline decoration-accent underline-offset-4 after:absolute after:inset-0 after:rounded-2xl hover:decoration-primary"
+              >
+                {service.title}
+              </Link>
             </h3>
             <p className="mt-3 text-base leading-7">{service.description}</p>
           </li>
