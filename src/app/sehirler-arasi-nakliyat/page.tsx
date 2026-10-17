@@ -1,5 +1,7 @@
 import type { Metadata } from "next";
+import Image from "next/image";
 import Link from "next/link";
+import intercityTruckPhoto from "@/assets/intercity-truck.webp";
 
 export const metadata: Metadata = {
   title: "Şehirler Arası Nakliyat | KutuRota",
@@ -35,14 +37,35 @@ export default function SehirlerArasiNakliyatPage() {
         Ana sayfaya dön
       </Link>
 
-      <header className="mt-8 border-b border-primary/15 pb-12 sm:pb-16">
-        <h1 className="max-w-3xl text-4xl leading-tight font-semibold tracking-tight text-primary sm:text-6xl">
-          Şehirler Arası Nakliyat
-        </h1>
-        <p className="mt-6 max-w-2xl text-lg leading-8 sm:text-xl">
-          Farklı şehirler arasında taşınma sürecinizi mesafe, zamanlama ve eşya
-          ihtiyaçlarınıza uygun şekilde planlıyoruz.
-        </p>
+      <header className="mt-8 grid items-center gap-10 border-b border-primary/15 pb-12 sm:gap-12 sm:pb-16 lg:grid-cols-2 lg:gap-16">
+        <div className="min-w-0">
+          <h1 className="max-w-3xl text-4xl leading-tight font-semibold tracking-tight text-primary sm:text-6xl">
+            Şehirler Arası Nakliyat
+          </h1>
+          <p className="mt-6 max-w-2xl text-lg leading-8 sm:text-xl">
+            Farklı şehirler arasında taşınma sürecinizi mesafe, zamanlama ve eşya
+            ihtiyaçlarınıza uygun şekilde planlıyoruz.
+          </p>
+          <Link
+            href="/teklif-al"
+            className="mt-8 inline-flex min-h-12 w-full items-center justify-center rounded-lg bg-accent px-6 py-3 text-sm font-semibold text-primary hover:bg-accent/80 sm:w-auto"
+          >
+            Teklif formunu inceleyin
+          </Link>
+        </div>
+
+        <div className="relative aspect-[3/2] overflow-hidden rounded-3xl bg-primary/5 ring-1 ring-primary/10 lg:aspect-[4/3]">
+          <Image
+            src={intercityTruckPhoto}
+            alt="Beyaz kapalı yük aracının arkasında kolileri yüklemeye hazırlayan iki taşıma görevlisi."
+            fill
+            sizes="(min-width: 1152px) 512px, (min-width: 1024px) calc(50vw - 64px), (min-width: 640px) calc(100vw - 64px), calc(100vw - 48px)"
+            loading="eager"
+            fetchPriority="high"
+            placeholder="blur"
+            className="object-cover object-[40%_50%]"
+          />
+        </div>
       </header>
 
       <section
