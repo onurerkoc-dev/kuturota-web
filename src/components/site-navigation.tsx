@@ -9,6 +9,7 @@ const navigationLinks = [
   { href: "/evden-eve-nakliyat", label: "Evden Eve Nakliyat" },
   { href: "/ofis-tasima", label: "Ofis Taşımacılığı" },
   { href: "/sehirler-arasi-nakliyat", label: "Şehirler Arası Nakliyat" },
+  { href: "/hakkimizda", label: "Hakkımızda" },
 ];
 
 export function SiteNavigation() {
