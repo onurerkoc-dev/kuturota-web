@@ -27,17 +27,15 @@ export function HeroSection() {
           >
             Ücretsiz Teklif Al
           </button>
-          <button
-            type="button"
-            disabled
-            aria-describedby="hero-cta-note"
-            className="inline-flex min-h-12 cursor-not-allowed items-center justify-center rounded-lg border border-primary/25 px-6 py-3 text-sm font-semibold text-primary disabled:opacity-75"
+          <a
+            href="#hizmetler"
+            className="inline-flex min-h-12 items-center justify-center rounded-lg border border-primary/25 px-6 py-3 text-sm font-semibold text-primary hover:border-primary hover:bg-primary/5"
           >
             Hizmetlerimizi Keşfedin
-          </button>
+          </a>
         </div>
         <p id="hero-cta-note" className="mt-3 text-sm leading-6">
-          Teklif ve hizmet detayları yakında erişime açılacak
+          Teklif alma özelliği yakında erişime açılacak
         </p>
       </div>
 
