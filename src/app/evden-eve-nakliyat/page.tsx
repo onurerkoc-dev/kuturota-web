@@ -1,5 +1,7 @@
 import type { Metadata } from "next";
+import Image from "next/image";
 import Link from "next/link";
+import movingTeamPhoto from "@/assets/home-moving-team.webp";
 
 export const metadata: Metadata = {
   title: "Evden Eve Nakliyat | KutuRota",
@@ -35,14 +37,35 @@ export default function EvdenEveNakliyatPage() {
         Ana sayfaya dön
       </Link>
 
-      <header className="mt-8 border-b border-primary/15 pb-12 sm:pb-16">
-        <h1 className="max-w-3xl text-4xl leading-tight font-semibold tracking-tight text-primary sm:text-6xl">
-          Evden Eve Nakliyat
-        </h1>
-        <p className="mt-6 max-w-2xl text-lg leading-8 sm:text-xl">
-          Yeni evinize taşınma sürecini ihtiyaçlarınıza uygun bir planlamayla
-          kolaylaştırıyoruz.
-        </p>
+      <header className="mt-8 grid items-center gap-10 border-b border-primary/15 pb-12 sm:gap-12 sm:pb-16 lg:grid-cols-2 lg:gap-16">
+        <div className="min-w-0">
+          <h1 className="max-w-3xl text-4xl leading-tight font-semibold tracking-tight text-primary sm:text-6xl">
+            Evden Eve Nakliyat
+          </h1>
+          <p className="mt-6 max-w-2xl text-lg leading-8 sm:text-xl">
+            Yeni evinize taşınma sürecini ihtiyaçlarınıza uygun bir planlamayla
+            kolaylaştırıyoruz.
+          </p>
+          <Link
+            href="/teklif-al"
+            className="mt-8 inline-flex min-h-12 w-full items-center justify-center rounded-lg bg-accent px-6 py-3 text-sm font-semibold text-primary hover:bg-accent/80 sm:w-auto"
+          >
+            Teklif formunu inceleyin
+          </Link>
+        </div>
+
+        <div className="relative aspect-[4/3] overflow-hidden rounded-3xl bg-primary/5 ring-1 ring-primary/10 lg:aspect-[5/4]">
+          <Image
+            src={movingTeamPhoto}
+            alt="Aydınlık bir evde taşınma kolileri taşıyan iki görevli."
+            fill
+            sizes="(min-width: 1152px) 512px, (min-width: 1024px) calc(50vw - 64px), (min-width: 640px) calc(100vw - 64px), calc(100vw - 48px)"
+            loading="eager"
+            fetchPriority="high"
+            placeholder="blur"
+            className="object-cover object-[70%_50%]"
+          />
+        </div>
       </header>
 
       <section
