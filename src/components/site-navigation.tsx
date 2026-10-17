@@ -10,6 +10,7 @@ const navigationLinks = [
   { href: "/ofis-tasima", label: "Ofis Taşımacılığı" },
   { href: "/sehirler-arasi-nakliyat", label: "Şehirler Arası Nakliyat" },
   { href: "/hakkimizda", label: "Hakkımızda" },
+  { href: "/teklif-al", label: "Teklif Al" },
 ];
 
 export function SiteNavigation() {
