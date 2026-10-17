@@ -1,3 +1,6 @@
+import Image from "next/image";
+import movingPhoto from "@/assets/hero-moving.webp";
+
 export function HeroSection() {
   return (
     <section
@@ -39,21 +42,19 @@ export function HeroSection() {
         </p>
       </div>
 
-      {/* shortcut: Dekoratif CSS illüstrasyonu; onaylı fotoğraf geldiğinde değiştirilecek. */}
       <div
-        aria-hidden="true"
-        className="relative isolate aspect-[6/5] overflow-hidden rounded-3xl bg-primary sm:aspect-[5/4] lg:aspect-[4/5]"
+        className="relative aspect-[6/5] overflow-hidden rounded-3xl bg-primary/5 ring-1 ring-primary/10 sm:aspect-[5/4] lg:aspect-[4/5]"
       >
-        <div className="absolute top-[12%] right-[12%] h-[58%] w-[44%] rounded-t-full border border-background/20" />
-        <div className="absolute right-[20%] bottom-[18%] h-[36%] w-[60%] rounded-full border border-dashed border-background/25" />
-        <div className="absolute right-[12%] bottom-[24%] h-3 w-3 rounded-full bg-accent ring-8 ring-accent/15" />
-        <div className="absolute right-[17%] bottom-[32%] h-[25%] w-[32%] rounded-sm bg-background before:absolute before:inset-y-0 before:left-[43%] before:w-[15%] before:bg-accent/50 after:absolute after:top-full after:left-0 after:h-[10%] after:w-full after:origin-top after:skew-x-[-45deg] after:bg-background/60" />
-        <div className="absolute bottom-[20%] left-[12%] h-[35%] w-[45%] rounded-sm bg-accent before:absolute before:inset-y-0 before:left-[43%] before:w-[15%] before:bg-background/50 after:absolute after:bottom-full after:left-0 after:h-[15%] after:w-full after:origin-bottom after:skew-x-[-45deg] after:bg-accent/75">
-          <span className="absolute bottom-[15%] left-[12%] text-sm font-bold tracking-tight text-primary sm:text-lg">
-            KutuRota
-          </span>
-        </div>
-        <div className="absolute right-[12%] bottom-[10%] left-[12%] h-px bg-background/15" />
+        <Image
+          src={movingPhoto}
+          alt="Modern bir oturma odasında taşınma için hazırlanmış koliler."
+          fill
+          sizes="(min-width: 1152px) 512px, (min-width: 1024px) calc(50vw - 64px), (min-width: 640px) calc(100vw - 64px), calc(100vw - 48px)"
+          loading="eager"
+          fetchPriority="high"
+          placeholder="blur"
+          className="object-cover object-[50%_65%]"
+        />
       </div>
     </section>
   );
