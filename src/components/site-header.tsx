@@ -11,12 +11,18 @@ export function SiteHeader() {
         >
           KutuRota
         </Link>
-        <nav aria-label="Ana navigasyon">
+        <nav aria-label="Ana navigasyon" className="flex flex-wrap gap-2">
           <Link
             href="/"
             className="inline-flex min-h-11 items-center rounded-md bg-accent/20 px-4 text-sm font-medium text-primary hover:bg-accent/35"
           >
             Ana sayfa
+          </Link>
+          <Link
+            href="/evden-eve-nakliyat"
+            className="inline-flex min-h-11 items-center rounded-md px-4 text-sm font-medium text-primary hover:bg-primary/5"
+          >
+            Evden Eve Nakliyat
           </Link>
         </nav>
       </div>

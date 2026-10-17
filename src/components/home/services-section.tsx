@@ -1,6 +1,9 @@
+import Link from "next/link";
+
 const services = [
   {
     title: "Evden Eve Nakliyat",
+    href: "/evden-eve-nakliyat",
     description:
       "Ev eşyalarınızın paketlenmesi, taşınması ve yeni adresinize yerleştirilmesi için ihtiyacınıza uygun planlama.",
     iconPath: "M3 10.5 12 3l9 7.5M5 9v12h14V9M9 21v-8h6v8",
@@ -45,7 +48,7 @@ export function ServicesSection() {
         {services.map((service) => (
           <li
             key={service.title}
-            className="rounded-2xl border border-primary/15 p-6 sm:p-8"
+            className="relative rounded-2xl border border-primary/15 p-6 sm:p-8"
           >
             <div className="flex size-12 items-center justify-center rounded-xl bg-accent/20 text-primary">
               <svg
@@ -63,7 +66,16 @@ export function ServicesSection() {
               </svg>
             </div>
             <h3 className="mt-6 text-xl font-semibold tracking-tight text-primary">
-              {service.title}
+              {service.href ? (
+                <Link
+                  href={service.href}
+                  className="rounded-sm underline decoration-accent underline-offset-4 after:absolute after:inset-0 after:rounded-2xl hover:decoration-primary"
+                >
+                  {service.title}
+                </Link>
+              ) : (
+                service.title
+              )}
             </h3>
             <p className="mt-3 text-base leading-7">{service.description}</p>
           </li>
