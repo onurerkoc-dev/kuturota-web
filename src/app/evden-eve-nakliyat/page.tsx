@@ -50,7 +50,7 @@ export default function EvdenEveNakliyatPage() {
             href="/teklif-al"
             className="mt-8 inline-flex min-h-12 w-full items-center justify-center rounded-lg bg-accent px-6 py-3 text-sm font-semibold text-primary hover:bg-accent/80 sm:w-auto"
           >
-            Teklif formunu inceleyin
+            Teklif Formunu İncele
           </Link>
         </div>
 

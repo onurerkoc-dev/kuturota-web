@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link";
 import movingPhoto from "@/assets/hero-moving.webp";
 
 export function HeroSection() {
@@ -22,14 +23,12 @@ export function HeroSection() {
           ve profesyonel çözümler.
         </p>
         <div className="mt-8 flex flex-col gap-3 sm:flex-row sm:flex-wrap">
-          <button
-            type="button"
-            disabled
-            aria-describedby="hero-cta-note"
-            className="inline-flex min-h-12 cursor-not-allowed items-center justify-center rounded-lg bg-accent px-6 py-3 text-sm font-semibold text-primary disabled:opacity-75"
+          <Link
+            href="/teklif-al"
+            className="inline-flex min-h-12 items-center justify-center rounded-lg bg-accent px-6 py-3 text-sm font-semibold text-primary hover:bg-accent/80"
           >
-            Ücretsiz Teklif Al
-          </button>
+            Teklif Formunu İncele
+          </Link>
           <a
             href="#hizmetler"
             className="inline-flex min-h-12 items-center justify-center rounded-lg border border-primary/25 px-6 py-3 text-sm font-semibold text-primary hover:border-primary hover:bg-primary/5"
@@ -37,9 +36,6 @@ export function HeroSection() {
             Hizmetlerimizi Keşfedin
           </a>
         </div>
-        <p id="hero-cta-note" className="mt-3 text-sm leading-6">
-          Teklif alma özelliği yakında erişime açılacak
-        </p>
       </div>
 
       <div
