@@ -2,12 +2,14 @@ import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
 import officeMovingPhoto from "@/assets/office-moving.webp";
+import { createPageMetadata } from "@/lib/metadata";
 
-export const metadata: Metadata = {
+export const metadata: Metadata = createPageMetadata({
   title: "Ofis Taşımacılığı | KutuRota",
   description:
     "Ofis mobilyaları, ekipmanlar ve çalışma alanları için iş takviminizi gözeten taşımacılık. KutuRota'nın ihtiyaç analizi, planlama ve yerleşim sürecini keşfedin.",
-};
+  path: "/ofis-tasima",
+});
 
 const movingSteps = [
   {

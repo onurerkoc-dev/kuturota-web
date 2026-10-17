@@ -2,12 +2,14 @@ import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
 import intercityTruckPhoto from "@/assets/intercity-truck.webp";
+import { createPageMetadata } from "@/lib/metadata";
 
-export const metadata: Metadata = {
+export const metadata: Metadata = createPageMetadata({
   title: "Şehirler Arası Nakliyat | KutuRota",
   description:
     "Farklı şehirler arasında taşınma sürecinizi mesafe, zamanlama ve eşya ihtiyaçlarınıza uygun şekilde planlıyoruz.",
-};
+  path: "/sehirler-arasi-nakliyat",
+});
 
 const movingSteps = [
   {

@@ -2,12 +2,14 @@ import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
 import movingTeamPhoto from "@/assets/home-moving-team.webp";
+import { createPageMetadata } from "@/lib/metadata";
 
-export const metadata: Metadata = {
+export const metadata: Metadata = createPageMetadata({
   title: "Evden Eve Nakliyat | KutuRota",
   description:
     "Yeni evinize taşınma sürecini ihtiyaçlarınıza uygun bir planlamayla kolaylaştırıyoruz. KutuRota'nın planlama, hazırlık ve taşıma adımlarını keşfedin.",
-};
+  path: "/evden-eve-nakliyat",
+});
 
 const movingSteps = [
   {

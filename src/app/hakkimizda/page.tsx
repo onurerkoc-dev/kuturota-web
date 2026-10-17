@@ -1,11 +1,13 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import { createPageMetadata } from "@/lib/metadata";
 
-export const metadata: Metadata = {
+export const metadata: Metadata = createPageMetadata({
   title: "Hakkımızda | KutuRota",
   description:
     "KutuRota'nın bireysel ve kurumsal taşınma ihtiyaçlarına yönelik planlı taşımacılık, açık iletişim ve eşyalara özen yaklaşımını tanıyın.",
-};
+  path: "/hakkimizda",
+});
 
 const approaches = [
   {

@@ -1,11 +1,13 @@
 import type { Metadata } from "next";
 import { QuoteForm } from "@/components/quote-form";
+import { createPageMetadata } from "@/lib/metadata";
 
-export const metadata: Metadata = {
+export const metadata: Metadata = createPageMetadata({
   title: "Teklif Al | KutuRota",
   description:
     "Evden eve, ofis ve şehirler arası nakliyat ihtiyaçlarınız için iletişim ve taşınma bilgilerinizi KutuRota teklif formunda düzenleyin.",
-};
+  path: "/teklif-al",
+});
 
 export default function TeklifAlPage() {
   return (
