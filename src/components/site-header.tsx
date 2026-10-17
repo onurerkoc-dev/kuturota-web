@@ -24,6 +24,12 @@ export function SiteHeader() {
           >
             Evden Eve Nakliyat
           </Link>
+          <Link
+            href="/ofis-tasima"
+            className="inline-flex min-h-11 items-center rounded-md px-4 text-sm font-medium text-primary hover:bg-primary/5"
+          >
+            Ofis Taşımacılığı
+          </Link>
         </nav>
       </div>
     </header>
