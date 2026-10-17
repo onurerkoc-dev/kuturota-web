@@ -1,5 +1,7 @@
 import type { Metadata } from "next";
+import Image from "next/image";
 import Link from "next/link";
+import officeMovingPhoto from "@/assets/office-moving.webp";
 
 export const metadata: Metadata = {
   title: "Ofis Taşımacılığı | KutuRota",
@@ -35,14 +37,35 @@ export default function OfisTasimaPage() {
         Ana sayfaya dön
       </Link>
 
-      <header className="mt-8 border-b border-primary/15 pb-12 sm:pb-16">
-        <h1 className="max-w-3xl text-4xl leading-tight font-semibold tracking-tight text-primary sm:text-6xl">
-          Ofis Taşımacılığı
-        </h1>
-        <p className="mt-6 max-w-2xl text-lg leading-8 sm:text-xl">
-          Ofis mobilyalarınızı, ekipmanlarınızı ve çalışma alanlarınızı iş
-          takviminizi gözeten bir planlamayla yeni adresinize taşıyoruz.
-        </p>
+      <header className="mt-8 grid items-center gap-10 border-b border-primary/15 pb-12 sm:gap-12 sm:pb-16 lg:grid-cols-[0.9fr_1.1fr] lg:gap-16">
+        <div className="min-w-0">
+          <h1 className="max-w-3xl text-4xl leading-tight font-semibold tracking-tight text-primary sm:text-6xl">
+            Ofis Taşımacılığı
+          </h1>
+          <p className="mt-6 max-w-2xl text-lg leading-8 sm:text-xl">
+            Ofis mobilyalarınızı, ekipmanlarınızı ve çalışma alanlarınızı iş
+            takviminizi gözeten bir planlamayla yeni adresinize taşıyoruz.
+          </p>
+          <Link
+            href="/teklif-al"
+            className="mt-8 inline-flex min-h-12 w-full items-center justify-center rounded-lg bg-accent px-6 py-3 text-sm font-semibold text-primary hover:bg-accent/80 sm:w-auto"
+          >
+            Teklif formunu inceleyin
+          </Link>
+        </div>
+
+        <div className="relative aspect-[3/2] overflow-hidden rounded-3xl bg-primary/5 ring-1 ring-primary/10">
+          <Image
+            src={officeMovingPhoto}
+            alt="Ofiste masa telefonunu koliye yerleştiren bir çalışan; masada dosyalar ve bilgisayar bulunuyor."
+            fill
+            sizes="(min-width: 1152px) 563px, (min-width: 1024px) calc(55vw - 70.4px), (min-width: 640px) calc(100vw - 64px), calc(100vw - 48px)"
+            loading="eager"
+            fetchPriority="high"
+            placeholder="blur"
+            className="object-cover object-[55%_60%]"
+          />
+        </div>
       </header>
 
       <section
