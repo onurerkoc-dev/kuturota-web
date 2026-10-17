@@ -29,7 +29,11 @@ const movingSteps = [
 
 export default function OfisTasimaPage() {
   return (
-    <main className="mx-auto w-full max-w-site flex-1 px-6 py-12 sm:px-8 sm:py-16 lg:py-20">
+    <main
+      id="main-content"
+      tabIndex={-1}
+      className="mx-auto w-full max-w-site flex-1 px-6 py-12 sm:px-8 sm:py-16 lg:py-20"
+    >
       <Link
         href="/"
         className="inline-flex min-h-11 items-center rounded-lg border border-primary/25 px-4 text-sm font-medium text-primary hover:border-primary hover:bg-primary/5"
@@ -104,7 +108,7 @@ export default function OfisTasimaPage() {
         >
           Ofis taşınma sürecimiz
         </h2>
-        <ol role="list" className="mt-8 grid gap-6 md:grid-cols-3">
+        <ol role="list" className="mt-8 grid gap-6 lg:grid-cols-3">
           {movingSteps.map((step, index) => (
             <li
               key={step.title}

@@ -1,7 +1,7 @@
 "use client";
 
 const inputClassName =
-  "mt-2 min-h-12 w-full min-w-0 rounded-lg border border-primary/20 bg-background px-4 py-3 text-base text-primary focus-visible:border-primary";
+  "mt-2 min-h-12 w-full min-w-0 rounded-lg border border-primary/60 bg-background px-4 py-3 text-base text-primary focus-visible:border-primary";
 const labelClassName = "block text-sm font-medium text-primary";
 
 export function QuoteForm() {

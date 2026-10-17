@@ -48,7 +48,11 @@ const services = [
 
 export default function HakkimizdaPage() {
   return (
-    <main className="mx-auto w-full max-w-site flex-1 space-y-12 px-6 py-12 sm:space-y-16 sm:px-8 sm:py-16 lg:space-y-20 lg:py-20">
+    <main
+      id="main-content"
+      tabIndex={-1}
+      className="mx-auto w-full max-w-site flex-1 space-y-12 px-6 py-12 sm:space-y-16 sm:px-8 sm:py-16 lg:space-y-20 lg:py-20"
+    >
       <header className="max-w-3xl">
         <h1 className="text-4xl leading-tight font-semibold tracking-tight text-primary sm:text-6xl">
           KutuRota Hakkında

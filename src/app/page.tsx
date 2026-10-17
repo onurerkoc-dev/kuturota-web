@@ -3,7 +3,11 @@ import { ServicesSection } from "@/components/home/services-section";
 
 export default function Home() {
   return (
-    <main className="mx-auto w-full max-w-site flex-1 px-6 sm:px-8">
+    <main
+      id="main-content"
+      tabIndex={-1}
+      className="mx-auto w-full max-w-site flex-1 px-6 sm:px-8"
+    >
       <HeroSection />
       <ServicesSection />
     </main>

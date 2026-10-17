@@ -9,7 +9,11 @@ export const metadata: Metadata = {
 
 export default function TeklifAlPage() {
   return (
-    <main className="mx-auto w-full max-w-site flex-1 px-6 py-12 sm:px-8 sm:py-16 lg:py-20">
+    <main
+      id="main-content"
+      tabIndex={-1}
+      className="mx-auto w-full max-w-site flex-1 px-6 py-12 sm:px-8 sm:py-16 lg:py-20"
+    >
       <div className="mx-auto w-full max-w-[52rem]">
         <header>
           <h1 className="text-3xl leading-tight font-semibold tracking-tight text-primary sm:text-4xl lg:text-5xl">
